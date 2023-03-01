@@ -4,8 +4,6 @@ WORKDIR /Cloudreve
 
 RUN go build -o cloudreve
 
-COPY cloudreve ./cloudreve
-
 RUN apk update \
     && apk add --no-cache tzdata \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
