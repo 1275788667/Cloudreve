@@ -2,6 +2,8 @@ FROM golang:alpine
 
 WORKDIR /cloudreve
 
+COPY * .
+
 RUN export http_proxy=http://192.168.10.100:12345 \
     && export https_proxy=http://192.168.10.100:12345 \
     && export ALL_PROXY=http://192.168.10.100:12345 \
