@@ -4,7 +4,7 @@ WORKDIR cloudreve
 
 RUN ls;pwd
 
-COPY cloudreve .
+COPY ../Cloudreve/* .
 
 RUN go build -o cloudreve
 
