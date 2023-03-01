@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: $PROJECT_NAME
+  name: test-go
+  labels:
+    app: test-go
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: test-go
+  template:
+    metadata:
+      labels:
+        app: test-go
+    spec:
+      containers:
+      - name: go
+        image: $REGISTRY/$PROJECT_NAME/$APP_NAME
