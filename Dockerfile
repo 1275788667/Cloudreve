@@ -1,6 +1,6 @@
 FROM golang:alpine
 
-WORKDIR /Cloudreve
+RUN ls
 
 RUN go build -o cloudreve
 
