@@ -1,6 +1,6 @@
 FROM golang:alpine
 
-WORKDIR cloudreve
+WORKDIR /Cloudreve
 
 RUN ls;pwd
 
