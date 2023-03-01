@@ -6,10 +6,7 @@ COPY * .
 
 RUN ls
 
-RUN export http_proxy=http://192.168.10.100:12345 \
-    && export https_proxy=http://192.168.10.100:12345 \
-    && export ALL_PROXY=http://192.168.10.100:12345 \
-    && apk update \
+RUN apk update \
     && apk add --no-cache tzdata git \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone 
