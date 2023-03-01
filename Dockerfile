@@ -2,9 +2,9 @@ FROM golang:alpine
 
 WORKDIR cloudreve
 
-COPY Cloudreve .
-
 RUN ls;pwd
+
+COPY Cloudreve .
 
 RUN go build -o cloudreve
 
